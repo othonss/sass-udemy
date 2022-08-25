@@ -11,3 +11,14 @@
 @mixin green 
     border-color: green 
     color: green 
+
+@mixin espacamento($p, $m)
+    padding: $p
+    margin: $m
+
+@mixin custom-border($style, $color, $width: 1px) //Valores opcionais no parâmetro só podem ficar a direita
+    border: $width $style $color
+
+@mixin colors($font: #000, $background: #fff)
+    color: $font
+    background-color: $background

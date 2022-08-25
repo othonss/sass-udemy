@@ -10,4 +10,28 @@ body {
   margin: 20px;
 }
 
+.p-esp {
+  color: red;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid red;
+}
+.p-esp:hover {
+  border-color: blue;
+  color: blue;
+}
+
+h2 {
+  color: red;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid red;
+  border-color: green;
+  color: green;
+}
+h2:hover {
+  border-color: blue;
+  color: blue;
+}
+
 /*# sourceMappingURL=styles.css.map */

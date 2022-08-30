@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+p {
+  font-family: "Open Sans";
+}
+
+h2 {
+  font-family: "Open Sans";
+  display: hidden;
+}
+
+.p-10 {
+  font-size: "10px";
+}
+
+.p-20 {
+  font-size: "20px";
+}
+
+.p-30 {
+  font-size: "30px";
+}
+
+h3 {
+  font-weight: 900;
+}
+
+.p-regular {
+  font-weight: 400;
+}
+
+.p-bold {
+  font-weight: 700;
+}
+
+.p-black {
+  font-weight: 900;
+}
+
+a {
+  color: pink;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

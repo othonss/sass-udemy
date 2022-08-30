@@ -1,0 +1,111 @@
+//TIPOS DE DADOS EM SASS
+
+//Módulo para poder utilizar o map
+@use 'sass:map' 
+$a: 10
+
+//Aceitavel    
+@debug $a
+@debug $a + 10px
+
+//Não aceitavel
+//@debug 10px + 10rem
+
+
+/* ------------------------------------------------------------------------------------------------
+/* ------------------------------------------------------------------------------------------------
+
+
+//Conceito de string no SASS
+$str: "Roboto"
+$str2: Roboto
+
+//O SASS omite as aspas no processamento, devido a isso ele considera tanto o str1 quanto o str2 como strings e iguais
+@debug $str == $str2
+
+//Concatenação
+$nome-da-fonte: "Open"
+$var1: "Sans"
+$var2: "Teste"
+$h: hidden
+
+@debug $nome-da-fonte + " " + $var1
+@debug $nome-da-fonte + " " + $var2
+
+//Exemplo do uso da possível propriedade com concatenação
+p
+    font-family: $nome-da-fonte + " " + $var1
+
+//Exemplo do uso da possível propriedade com interpolação
+h2 
+    font-family: "#{$nome-da-fonte} #{$var1}"
+    display: $h
+
+//Cores também são considerados tipos de dados
+@debug #fff
+@debug rgb(55, 56, 36)
+@debug hsl(50, 50%, 69%)
+@debug rgba(56, 58, 98, 0.5)
+
+//Array em SASS
+
+$list: 10, 20, 30
+
+//Como o map e o forEach do javascript
+@each $value in $list
+    @debug $value 
+
+@each $font in $list
+    .p-#{$font}
+        font-size: $font + "px"
+
+//Utilização do map
+$font-weights: ("regular": 400, "bold": 700, "black": 900)
+
+h3
+    font-weight: map.get($font-weights, "black")
+
+@each $key, $value in $font-weights
+    .p-#{$key}
+        font-weight: $value
+
+//Dados booleanos
+@debug true
+@debug false
+
+@debug 10 > 10
+@debug 15 < 5
+@debug 10 < 100
+
+@if 10 < 3
+    a 
+        color: red
+@else 
+    a
+        color: pink
+
+//Operadores
+
+@debug 10 == 10
+@debug 10 != 10
+
+$x: 20
+
+@debug $x != 12
+
+@if $x != 12
+  h1
+    font-size: $x + px
+
+@debug 10 > 10
+@debug 10 >= 10
+@debug 20 < 40
+@debug 30 <= 29
+
+@debug 10px + 12px
+@debug 100 - 20
+@debug 10% * 5
+//@debug (100% / 2)
+@debug 12 % 3
+@debug 13 % 3
+
